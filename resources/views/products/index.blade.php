@@ -6,9 +6,9 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">
-                        <h4>
+                        <h5>
                             Registrar producto
-                        </h4>
+                        </h5>
                     </div>
 
                     <div class="card-body">
@@ -72,23 +72,21 @@
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="comment" class="form-label">Observación</label>
-                                        <textarea class="form-control" name="comment" id="comment" placeholder="Comentario"></textarea>
+                                        <textarea class="form-control" name="comment" id="comment" placeholder="Observación"></textarea>
                                         @if ($errors->has('comment'))
                                             <span class="text-danger">{{ $errors->first('comment') }}</span>
                                         @endif
                                     </div>
-
                                 </div>
-
                             </div>
-                            <button type="submit" class="btn btn-success">Register</button>
+                            <button type="submit" class="btn btn-success">Registrar</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-7">
                 <div class="card">
-                    <div class="card-header">Listado de productos</div>
+                    <div class="card-header"><h5>Listado de productos</h5></div>
                     <div class="card-body">
                         <table class="table">
                             <thead>

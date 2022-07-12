@@ -6,11 +6,10 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4>
+                        <h5>
                             Registrar marca
-                        </h4>
+                        </h5>
                     </div>
-
                     <div class="card-body">
                         <form method="POST" action="{{ route('brand.store') }}">
                             @csrf
@@ -29,14 +28,15 @@
                                     <span class="text-danger">{{ $errors->first('reference') }}</span>
                                 @endif
                             </div>
-                            <button type="submit" class="btn btn-success">Register</button>
+                            <button type="submit" class="btn btn-success">Registrar</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Listado de marcas</div>
+                    <div class="card-header"><h5>
+                        Listado de marcas</h5></div>
 
                     <div class="card-body">
                         <table class="table">

@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mt-4">
                 <div class="card">
-                    <div class="card-header">
-                        <a href="{{ url('/brands') }}" class="btn btn-primary">Listado de marcas</a>
-                        <h4 class="text-title mt-2">
+                    <div class="card-header" style="display:flex; justify-content: space-between;">
+                        <h5 class="text-title mt-2">
                             Actualizar marca
-                        </h4>
+                        </h5>
+                        <a href="{{ url('/brands') }}" class="btn btn-primary">Listado de marcas</a>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url('brand/update/' . $brand->id) }}">

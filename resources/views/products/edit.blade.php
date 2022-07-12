@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-6 mt-4">
                 <div class="card">
-                    <div class="card-header">
-                        <a href="{{ url('/products') }}" class="btn btn-primary">Listado de productos</a>
-                        <h4 class="text-title mt-2">
+                    <div class="card-header" style="display:flex; justify-content: space-between;">
+                        <h5 class="text-title mt-2">
                             Actualizar producto
-                        </h4>
+                        </h5>
+                        <a href="{{ url('/products') }}" class="btn btn-primary">Listado de productos</a>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url('/product/update/' . $product->id) }}">
@@ -71,7 +71,7 @@
                                     <div class="mb-3">
                                         <label for="boarding_date" class="form-label">Fecha embarque</label>
                                         <input type="date" class="form-control" name="boarding_date"
-                                            placeholder="Fecha de embarque" value="{{ $product->boarding_date }}">
+                                             value="{{ $product->boarding_date }}">
                                         @if ($errors->has('boarding_date'))
                                             <span class="text-danger">{{ $errors->first('boarding_date') }}</span>
                                         @endif
@@ -90,7 +90,7 @@
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="comment" class="form-label">Observación</label>
-                                        <textarea class="form-control" name="comment" id="comment" placeholder="Comentario">
+                                        <textarea class="form-control" name="comment" id="comment">
                                             {{ $product->comment }}
                                         </textarea>
                                         @if ($errors->has('comment'))
