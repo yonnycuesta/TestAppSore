@@ -43,12 +43,12 @@ class ProductStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'The name field is required.',
-            'size.required' => 'The size field is required.',
-            'comment.required' => 'The comment field is required.',
-            'brand_id.required' => 'The brand field is required.',
-            'qty.required' => 'The qty field is required.',
-            'boarding_date.required' => 'The boarding date field is required.',
+            'name.required' => 'El nombre es requerido.',
+            'size.required' => 'El tamaño es requerido.',
+            'comment.required' => 'La observación es requerida.',
+            'brand_id.required' => 'La marca es requerida.',
+            'qty.required' => 'La cantidad es requerida.',
+            'boarding_date.required' => 'La fecha de embarque es requerida.',
         ];
     }
 }

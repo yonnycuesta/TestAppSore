@@ -38,10 +38,10 @@ class BrandUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.string' => 'The name must be a string',
-            'name.max' => 'The name must be less than 255 characters',
-            'reference.string' => 'The reference must be a string',
-            'reference.max' => 'The reference must be less than 255 characters',
+            'name.string' => 'El nombre debe ser una cadena de texto.',
+            'name.max' => 'El nombre no puede tener más de 255 caracteres.',
+            'reference.string' => 'La referencia debe ser una cadena de texto.',
+            'reference.max' => 'La referencia no puede tener más de 255 caracteres.',
         ];
     }
 }

@@ -27,7 +27,7 @@
                                     <div class="mb-3">
                                         <label for="size" class="form-label">Tamaño</label>
                                         <select name="size" id="size" class="form-control">
-                                            <option value="0">Seleccione Tamaño</option>
+                                            <option value="">Seleccione Tamaño</option>
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>

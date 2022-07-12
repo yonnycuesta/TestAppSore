@@ -41,12 +41,15 @@ class ProductUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'The name field is required.',
-            'size.required' => 'The size field is required.',
-            'comment.required' => 'The comment field is required.',
-            'brand_id.required' => 'The brand field is required.',
-            'qty.required' => 'The qty field is required.',
-            'boarding_date.required' => 'The boarding date field is required.',
+            'name.string' => 'El nombre debe ser una cadena de texto.',
+            'name.max' => 'El nombre no puede tener más de 255 caracteres.',
+            'size.string' => 'El tamaño debe ser una cadena de texto.',
+            'size.max' => 'El tamaño no puede tener más de 255 caracteres.',
+            'comment.string' => 'La observación debe ser una cadena de texto.',
+            'comment.max' => 'La observación no puede tener más de 255 caracteres.',
+            'brand_id.integer' => 'La marca debe ser un número entero.',
+            'qty.integer' => 'La cantidad debe ser un número entero.',
+            'boarding_date.date' => 'La fecha de embarque debe ser una fecha válida.',
         ];
     }
 }

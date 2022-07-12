@@ -23,7 +23,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="reference" class="form-label">Referencia</label>
-                                <input type="text" class="form-control" name="reference" placeholder="Referencia">
+                                <input type="text" class="form-control" name="reference" placeholder="Ejemplo: abc123">
                                 @if ($errors->has('reference'))
                                     <span class="text-danger">{{ $errors->first('reference') }}</span>
                                 @endif
