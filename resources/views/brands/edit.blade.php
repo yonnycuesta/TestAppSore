@@ -24,7 +24,7 @@
                                 <input type="text" class="form-control" name="reference" placeholder="Referencia"
                                     value="{{ $brand->reference }}">
                             </div>
-                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                            <button type="submit" class="btn btn-secondary">Actualizar</button>
                         </form>
                     </div>
                 </div>

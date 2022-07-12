@@ -124,6 +124,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="card-footer">
+                        {{ $products->links() }}
+                    </div>
                 </div>
             </div>
         </div>
