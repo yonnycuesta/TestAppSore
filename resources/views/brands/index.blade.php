@@ -1,10 +1,14 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card">
+                    @if (Session::has('brand-success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('brand-success') }}
+                        </div>
+                    @endif
                     <div class="card-header">
                         <h5>
                             Registrar marca
@@ -35,6 +39,15 @@
             </div>
             <div class="col-md-8">
                 <div class="card">
+                    @if (Session::has('brand-error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ Session::get('brand-error') }}
+                        </div>
+                    @elseif (Session::has('brand-deleted'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('brand-deleted') }}
+                        </div>
+                    @endif
                     <div class="card-header">
                         <h5>
                             Listado de marcas</h5>
@@ -71,21 +84,10 @@
                         </table>
                     </div>
                     <div class="card-footer">
-                    {{ $brands->links() }}
+                        {{ $brands->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    @if (Session::has('brand-success'))
-        <script>
-            toastr.options = {
-                "closeButton": true,
-                "progressBar": true,
-                "timeOut": "3000",
-            };
-            toastr.success("{{ Session::get('brand-success') }}");
-        </script>
-    @endif
 @endsection

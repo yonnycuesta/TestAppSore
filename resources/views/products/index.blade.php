@@ -5,6 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card">
+                    @if (Session::has('product-success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('product-success') }}
+                        </div>
+                    @endif
                     <div class="card-header">
                         <h5>
                             Registrar producto
@@ -86,6 +91,11 @@
             </div>
             <div class="col-md-7">
                 <div class="card">
+                    @if (Session::has('product-deleted'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('product-deleted') }}
+                        </div>
+                    @endif
                     <div class="card-header">
                         <h5>Listado de productos</h5>
                     </div>
@@ -132,4 +142,5 @@
         </div>
 
     </div>
+
 @endsection

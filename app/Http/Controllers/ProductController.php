@@ -39,7 +39,7 @@ class ProductController extends Controller
         $product->qty = $request->qty;
         $product->boarding_date = $request->boarding_date;
         $product->save();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('product-success', 'El producto se ha guardado correctamente');
     }
 
    /**
@@ -91,6 +91,6 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('product-deleted', 'El producto se ha eliminado correctamente');
     }
 }
