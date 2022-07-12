@@ -86,7 +86,9 @@
             </div>
             <div class="col-md-7">
                 <div class="card">
-                    <div class="card-header"><h5>Listado de productos</h5></div>
+                    <div class="card-header">
+                        <h5>Listado de productos</h5>
+                    </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -111,9 +113,11 @@
                                         <td>{{ $product->boarding_date }}</td>
                                         <td>
                                             <a href="{{ url('/product/edit/' . $product->id) }}"
-                                                class="btn btn-primary">Editar</a>
+                                                class="btn btn-primary">Editar
+                                            </a>
                                             <a href="{{ url('/product/delete/' . $product->id) }}"
-                                                class="btn btn-danger">Eliminar</a>
+                                                class="btn btn-danger">Eliminar
+                                            </a>
                                         </td>
                                 </tr>
                                 @endforeach

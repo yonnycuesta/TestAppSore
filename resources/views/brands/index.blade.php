@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
                         <h5>
@@ -33,11 +33,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header"><h5>
                         Listado de marcas</h5></div>
-
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -55,9 +54,13 @@
                                         <td>{{ $brand->name }}</td>
                                         <td>{{ $brand->reference }}</td>
                                         <td>
-                                            <a href="{{ url('/brand/edit/' . $brand->id) }}" class="btn btn-primary">Editar</a>
+                                            <a href="{{ url('/brand/edit/' . $brand->id) }}" class="btn btn-primary">Editar
+                                            <i class="fas fa-edit"></i>
+                                            </a>
                                             <a href="{{ url('/brand/delete/' . $brand->id) }}"
-                                                class="btn btn-danger">Eliminar</a>
+                                                class="btn btn-danger">Eliminar
+                                                <i class="fas fa-trash"></i>
+                                            </a>
                                         </td>
                                 </tr>
                                 @endforeach
